@@ -1,0 +1,11 @@
+---
+  - debug:
+      msg: "Copying hosts_{{ dpc_name }} file"
+
+  - name: Copy hosts file
+    copy:
+      src: "hosts_{{ dpc_name }}"
+      dest: /etc/hosts
+      owner: root
+      group: root
+      mode: 0644
